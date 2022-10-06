@@ -1,7 +1,6 @@
 #include<stdio.h>
 void fifo(int n,int no,int pages[]){
 	int i,j,frame[10],k,avail,count=0;
-	
 	for(i=0;i<no;i++)
 		frame[i]=-1;
 	j=0;
@@ -22,7 +21,6 @@ void fifo(int n,int no,int pages[]){
 		printf("\n");
 	}
 }
-
 void lru(int n,int nf,int pages[]){
 	int i,j,k,flag,pag,count,result[10],flagP[10];
 	count=0;
