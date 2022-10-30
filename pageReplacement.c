@@ -1,3 +1,4 @@
+//PROGRAM TO IMPLEMENT PAGE REPLACEMENT ALGORITHM
 #include<stdio.h>
 void fifo(int n,int no,int pages[]){
 	int i,j,frame[10],k,avail,count=0;
