@@ -20,7 +20,7 @@ int main()
     }
     printf("Enter the Available Matrix");
     for (i = 0; i < m; i++)
-        scanf("%d", &avail[i]);
+        scanf("%d", &avail[i]); // Reading the available matrix
     int finish[n], safesequence[n], work[m], need[n][m];
     // calculating NEED matrix
     for (i = 0; i < n; i++)
