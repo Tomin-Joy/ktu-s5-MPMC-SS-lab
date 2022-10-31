@@ -1,5 +1,7 @@
 //PROGRAM TO IMPLEMENT PAGE REPLACEMENT ALGORITHM
 #include<stdio.h>
+
+//Function to implement FIFO
 void fifo(int n,int no,int pages[]){
 	int i,j,frame[10],k,avail,count=0;
 	for(i=0;i<no;i++)
@@ -22,6 +24,8 @@ void fifo(int n,int no,int pages[]){
 		printf("\n");
 	}
 }
+
+//Function to implement LRU
 void lru(int n,int nf,int pages[]){
 	int i,j,k,flag,pag,count,result[10],flagP[10];
 	count=0;
@@ -74,6 +78,8 @@ void print(int frameNo,int frame[]){
 	printf("\n");
 }
 	
+
+//Function to implement LFU
 void lfu(int n,int frameNo,int page[]){
 	int i,j,k,frame[10],move=0,flag,count=0,count1[10]={0},repIndex,leastCount;
 	for(i=0;i<n;i++)
@@ -138,11 +144,3 @@ void main(){
 		}
 	}while(option!=4);
 }
-
-			
-	
-	
-		
-	
-		
-		
