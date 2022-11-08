@@ -8,8 +8,6 @@ int searchSymtab(char label[]){
     symtab=fopen("symtab.txt","r");
     while(!feof(symtab)){
         fscanf(symtab,"%s %d",symbol,&value);
-		printf("%s %s\n",label,symbol);
-
         if(!strcmp(label,symbol)){
 			fclose(symtab);
             return 1;
@@ -25,8 +23,6 @@ int searchOpcode(char opcode[]){
 	optab = fopen("optab.txt","r");
 	while(!feof(optab)){
 		fscanf(optab,"%s",op);
-		printf("%s %s\n",opcode,op);
-
 		if(!strcmp(op,opcode)){
 			fclose(optab);
 			return 1;
@@ -41,6 +37,8 @@ int main(){
 	char label[10],opcode[10],operand[10];
 	in = fopen("input.txt","r");
 	out = fopen("intermediate.txt","w");
+	sym = fopen("symtab.txt","w");
+	fclose(sym);
 	if(!feof(in)){
 		fscanf(in,"%s%s%d",label,opcode,&op);
 		if(!strcmp(opcode,"START")){
