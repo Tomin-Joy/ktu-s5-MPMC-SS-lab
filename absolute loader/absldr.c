@@ -30,6 +30,8 @@ void main()
 			}
 		}
 		else if(line[0]='E')
-		fclose(fp);
+		break;
 	}while(!feof(fp));
+	
+		fclose(fp);
 }
